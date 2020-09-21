@@ -17,7 +17,6 @@ route.get('/:id', (req, res) => {
       }
 
       if (row) {
-        console.log(row)
         res.redirect(row.url)
         return
       }

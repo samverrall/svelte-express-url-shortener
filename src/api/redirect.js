@@ -35,8 +35,6 @@ route.post("/redirect", async (req, res) => {
     body
   } = req;
 
-  console.log(body);
-
   try {
     const shortHand = generate(7);
     const url = body.url;

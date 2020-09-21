@@ -32,10 +32,9 @@
         allAddedRedirects = [...allAddedRedirects, addedRedirect];
 
         url = "";
-        console.log(addedRedirect);
       })
       .catch(function(error) {
-        console.log(error);
+        console.error(error);
       });
   }
 

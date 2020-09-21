@@ -18,7 +18,7 @@
         })
         .catch(err => {
           allAddedRedirects = [];
-          console.log(err);
+          console.error(err);
         });
     } catch (err) {
       allAddedRedirects = [];
