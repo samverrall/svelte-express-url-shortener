@@ -1,13 +1,7 @@
 import express from "express";
-import {
-  generate
-} from "randomstring";
-import {
-  v4 as uuidv4
-} from "uuid";
-import {
-  createRedirectTableIfNotExists
-} from "../schema/redirectSchema";
+import { generate } from "randomstring";
+import {  v4 as uuidv4 } from "uuid";
+import { createRedirectTableIfNotExists } from "../schema/redirectSchema";
 import db from "../database";
 
 const route = express.Router();
@@ -51,8 +45,8 @@ route.post("/redirect", async (req, res) => {
       whereArgs,
       function (err) {
         if (err) {
-          return res.send(500).json({
-            error: "There was an issue creating your shortend url.",
+          return res.status(500).json({
+            error: "There was an issue creating your shortened url.",
           });
         }
       }
